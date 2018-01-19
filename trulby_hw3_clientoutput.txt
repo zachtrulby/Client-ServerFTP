@@ -1,0 +1,99 @@
+Script started on November  7, 2017 08:09:47 PM EST
+trulbyw@FSU-Unix:~$ ./clientftp
+Started execution of client ftp
+Calling clntConnect to connect to the server
+my ftp> user zach
+Cmd 331 account required for login
+ 
+my ftp> pass password
+Cmd 231 password correct... logging in. 
+my ftp> pwd
+cmd 250 okay /export/home/trulbyw
+
+ 
+my ftp> ls
+Cmd 250 okay 
+>
+clientftp
+clientftptest.c
+ftpProject
+local.cshrc
+local.login
+local.profile
+rpcProject
+serverftp
+serverftptest.c
+trulby_hw3_clientoutput
+trulby_hw3_serveroutput
+
+ 
+my ftp> mkdir foobar
+Cmd 212 successfully created directory: foobar
+ 
+my ftp> rmdir foobar
+Cmd 212 successfully removed directory: foobar
+ 
+my ftp> dele rpcProject
+Cmd 211 okay, deleted file: rpcProject
+ 
+my ftp> cd ./rpcProject
+ 
+my ftp> cd ..
+ 
+my ftp> pwd
+Cmd 250 okay /export/home/trulbyw
+
+ 
+my ftp> cd ftpProject
+ 
+my ftp> pwd
+Cmd 250 okay /export/home/trulbyw/ftpProject
+
+ 
+my ftp> stat
+ 
+my ftp> stat hel   dir
+ 
+my ftp> user phoney
+Cmd 332 username not found. Please enter a valid username.
+ 
+my ftp> user
+Cmd 332 username not found. Please enter a valid username.
+ 
+my ftp> help
+Commands         Use                        Syntax
+pwd	    prints current directory	     pwd
+cd	    change directory		    cd dir
+ls	    print files in directory         ls
+dele	    remove specified file	 dele filename
+stat	    print stats			     stat
+mkdir	    make a directory		  mkdir dir
+rmdir	    remove a directory		  rmdir dir
+user	    login username		 user username
+pass	    login password		 pass password
+
+my ftp> quit
+Cmd 231 okay, logging out...
+ 
+Closing control connection 
+Exiting client main 
+
+Started execution of client ftp
+Calling clntConnect to connect to the server
+my ftp> put file
+ 
+my ftp> recie  v
+ 
+my ftp> 
+Cmd 202 Error: Not a valid command.
+ 
+my ftp> ex  quit    put a   "buffer"
+cannot bind: Address already in use
+no Cmd 202 Error: Not a valid command.
+ 
+my ftp> recv
+
+revc  cv
+
+my ftp> quit
+Cmd 231 okay, logging out...

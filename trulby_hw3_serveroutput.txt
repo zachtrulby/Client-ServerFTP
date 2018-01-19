@@ -1,0 +1,144 @@
+Script started on November  7, 2017 08:09:02 PM EST
+trulbyw@FSU-Unix:~$ ./serverftp
+Started execution of server ftp
+Initialize ftp server
+ftp server is waiting to accept connection
+Came out of accept() function 
+Connected to client, calling receiveMsg to get ftp cmd from client 
+user zach 
+user command is user
+argument is alex
+line: alex password
+cmd 331 name okay, need password 
+ 
+pass password 
+user command is pass
+argument is password
+cmd 231 password correct 
+pwd 
+cmd 250 okay /export/home/trulbyw
+
+ 
+ls 
+cmd 250 okay 
+>
+clientftp
+clientftptest.c
+ftpProject
+local.cshrc
+local.login
+local.profile
+rpcProject
+serverftp
+serverftptest.c
+trulby_hw3_clientoutput
+trulby_hw3_serveroutput
+
+ 
+mkdir foobar 
+user command is mkdir
+argument is foobar
+Cmd 212 successfully created directory: foobar
+ 
+rmdir foobar 
+user command is rmdir
+argument is foobar
+Cmd 212 successfully removed directory: foobar
+ 
+dele rpcProject 
+user command is dele
+argument is rpcProject
+rm: rpcProject is a directory
+Cmd 211 okay, deleted file: rpcProject
+ 
+cd ./rpcProject 
+user command is cd
+argument is ./rpcProject
+ 
+cd .. 
+user command is cd
+argument is ..
+ 
+pwd 
+Cmd 250 okay /export/home/trulbyw
+
+ 
+cd ftpProject 
+user command is cd
+argument is ftpProject
+ 
+pwd 
+Cmd 250 okay /export/home/trulbyw/ftpProject
+
+ 
+stat 
+stat: missing operand
+Try 'stat --help' for more information.
+ 
+stat dir 
+user command is stat
+argument is dir
+stat: missing operand
+Try 'stat --help' for more information.
+Error: Command stat does not require an argument. Please try again. 
+user phoney 
+user command is user
+argument is phoney
+line: zach password
+line: catie bubblegum
+line: martin guitar
+line: andrew frosty
+Cmd 332 username not found. Please enter a valid username.
+ 
+user 
+line: zach password
+line: catie bubblegum
+line: martin guitar
+line: andrew frosty
+Cmd 332 username not found. Please enter a valid username.
+ 
+help 
+Commands         Use                        Syntax
+pwd	    prints current directory	     pwd
+cd	    change directory		    cd dir
+ls	    print files in directory         ls
+dele	    remove specified file	 dele filename
+stat	    print stats			     stat
+mkdir	    make a directory		  mkdir dir
+rmdir	    remove a directory		  rmdir dir
+user	    login username		 user username
+pass	    login password		 pass password
+ 
+quit 
+Cmd 231 okay, logging out...
+
+trulbyw@FSU-Unix:~$ ./serverftp
+Started execution of server ftp
+Initialize ftp server
+ftp server is waiting to accept connection
+Came out of accept() function 
+Connected to client, calling receiveMsg to get ftp cmd from client 
+put file 
+user command is put
+argument is file
+ 
+recv 
+þ@¡þ 
+ 
+ 
+Cmd 202 Error: Not a valid command.
+ 
+put "buffer" 
+user command is put
+argument is "buffer"
+Cmd 202 Error: Not a valid command.
+ 
+recv 
+
+Cmd 231 okay, logging out...
+
+
+
+
+
+
